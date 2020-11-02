@@ -5,3 +5,5 @@
 запустить
 
  docker run --rm -it z80llvm bash
+
+ docker run --rm -it -v$(pwd):/current_dir z80llvm bash
