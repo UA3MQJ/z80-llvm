@@ -9,6 +9,6 @@ RUN apt-get update && \
 RUN svn auth
 RUN echo "http-timeout = 259200" >> ~/.subversion/servers
 RUN echo "http-timeout = 259200" >> /etc/subversion/servers
-# RUN svn co http://llvm.org/svn/llvm-project/llvm/trunk -r 316129 --force llvm
-# RUN svn co http://llvm.org/svn/llvm-project/cfe/trunk -r 316129 --force llvm/tools/clang
-# RUN ./build.sh
+RUN svn co http://llvm.org/svn/llvm-project/llvm/trunk -r 316129 --force llvm
+RUN svn co http://llvm.org/svn/llvm-project/cfe/trunk -r 316129 --force llvm/tools/clang
+RUN ./build.sh
