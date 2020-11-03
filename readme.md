@@ -1,13 +1,13 @@
 
 # Image - LLVM clang for z80
 
-Start clang toolchain in docker with local path
+Start clang toolchain in docker with local path. Compressed size in [Dockerhub](https://hub.docker.com/repository/docker/ua3mqj/z80llvm) - 1.3 Gb.
 
 ```
 docker run --rm -it -v$(pwd):/current_dir ua3mqj/z80llvm:1.0.3 bash
 ```
 
-Example
+# Example
 
 ```
 root@91be3c608df8:/current_dir# clang -target ez80 -xc - -S -o- <<<'void test(void){}'
@@ -19,7 +19,7 @@ _test:
 	ret
 ```
 
-Example
+# Example
 
 ```
 clang -cc1 -triple z80 -S -O3 -o test1.s test1.c
@@ -47,7 +47,7 @@ _foo:
 	ret
 ```
 
-Example
+# Example
 
 ```
 clang -cc1 -triple z80 -S -O3 -o test2.s test2.c
